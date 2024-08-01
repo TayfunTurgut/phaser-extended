@@ -1,0 +1,42 @@
+{
+  "name": "phaser-extended",
+  "version": "1.0.1",
+  "description": "A component library for Phaser",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "verify": "pnpm typecheck && pnpm lint",
+    "build": "pnpm verify && webpack"
+  },
+  "keywords": [
+    "phaser",
+    "game",
+    "component",
+    "library"
+  ],
+  "author": "Tayfun Turgut",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.1.0",
+    "@types/webpack": "^5.28.5",
+    "eslint": "^9.8.0",
+    "prettier": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "phaser": "^3.80.1"
+  }
+}

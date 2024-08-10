@@ -1,14 +1,19 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 
-const config = tseslint.config(
+const tseslintConfig = tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
 );
 
-export default [
-  ...config,
+/**
+ * @type {import("@typescript-eslint/utils/dist/ts-eslint").FlatConfig.ConfigArray}
+ */
+const config = [
+  ...tseslintConfig,
   {
     ignores: ["dist/*"],
   },
 ];
+
+export default config;

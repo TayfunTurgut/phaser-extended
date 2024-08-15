@@ -1,4 +1,4 @@
-import { MILLI_PER_MIN, MILLI_PER_SEC } from "@/constants/time";
+import { MILLI_PER_MIN, MILLI_PER_SEC } from "../constants/time";
 
 export const getMillisFromSeconds = (seconds: number) =>
   seconds * MILLI_PER_SEC;

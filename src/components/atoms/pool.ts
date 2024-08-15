@@ -1,8 +1,8 @@
 import CWrapper, {
   CWrapperConstructor,
   IWrappable,
-} from "@/components/atoms/wrapper";
-import { assertIsDefined } from "@/utils/assert";
+} from "../../components/atoms/wrapper";
+import { assertIsDefined } from "../../utils/assert";
 import { Scene } from "phaser";
 
 const cache = new Map<

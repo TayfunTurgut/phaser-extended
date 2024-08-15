@@ -4,14 +4,9 @@
     "module": "ESNext",
     "target": "ESNext",
     "esModuleInterop": true,
-    "moduleResolution": "Node",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "sourceMap": true,
-    "declaration": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "isolatedModules": true
   }
 }

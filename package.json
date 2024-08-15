@@ -1,20 +1,18 @@
 {
   "name": "phaser-extended",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "A component library for Phaser",
-  "main": "dist/index.js",
-  "type": "module",
+  "main": "dist/phaser-extended.cjs.js",
+  "module": "dist/phaser-extended.esm.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "verify": "pnpm typecheck && pnpm lint",
-    "build": "pnpm verify && webpack --mode production"
+    "build": "pnpm verify && pnpm preconstruct build"
   },
   "keywords": [
     "phaser",
@@ -25,21 +23,17 @@
   "author": "Tayfun Turgut",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-typescript": "^7.24.7",
     "@eslint/js": "^9.8.0",
+    "@preconstruct/cli": "^2.8.7",
     "@types/eslint__js": "^8.42.3",
-    "@types/webpack": "^5.28.5",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^12.0.2",
     "eslint": "^9.8.0",
-    "html-webpack-plugin": "^5.6.0",
     "prettier": "^3.3.3",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.0",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4",
-    "webpack-merge": "^6.0.1"
+    "typescript-eslint": "^8.0.0"
   },
   "dependencies": {
     "phaser": "^3.80.1"

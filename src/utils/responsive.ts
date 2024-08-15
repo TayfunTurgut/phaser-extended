@@ -1,5 +1,5 @@
 import { Events, Scale, Structs } from "phaser";
-import { TNumberTuple2 } from "@/types/math";
+import { TNumberTuple2 } from "../types/math";
 
 export const RESIZE_EVENT = "resize";
 

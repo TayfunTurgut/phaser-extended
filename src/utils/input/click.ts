@@ -1,4 +1,4 @@
-import { Input, Events } from "phaser";
+import { Events, Input } from "phaser";
 
 export const EVENT_CLICK = "click";
 const CLICK_DELAY = 200;

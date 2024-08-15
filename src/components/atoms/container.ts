@@ -1,12 +1,16 @@
-import { GameObjects, Structs } from "phaser";
+import { GameObjects, Scene, Structs } from "phaser";
 import CWrapper, {
   CWrapperConstructor,
   IWrappable,
-} from "@/components/atoms/wrapper";
-import { toPool } from "@/components/atoms/pool";
+} from "../../components/atoms/wrapper";
+import { toPool } from "./pool";
 
 export default class CContainer extends CWrapper<GameObjects.Container> {
   private readonly list: CWrapper<IWrappable>[] = [];
+
+  constructor(scene: Scene) {
+    super(scene);
+  }
 
   update() {
     for (const child of this.list) {

@@ -1,4 +1,4 @@
-import { Input, Events } from "phaser";
+import { Events, Input } from "phaser";
 
 export const EVENT_HOVER = "hover";
 

@@ -1,8 +1,8 @@
 import { GameObjects, Geom, Scene, Structs, Types } from "phaser";
-import { addResizeListener, RESIZE_EVENT } from "@/utils/responsive";
-import { addClickListener } from "@/utils/input/click";
-import { addHoverListener } from "@/utils/input/hover";
-import CContainer from "@/components/atoms/container";
+import { addResizeListener, RESIZE_EVENT } from "../../utils/responsive";
+import { addClickListener } from "../../utils/input/click";
+import { addHoverListener } from "../../utils/input/hover";
+import CContainer from "../../components/atoms/container";
 
 export interface IWrappable extends GameObjects.GameObject {
   getBounds?: () => Geom.Rectangle;

@@ -1,5 +1,5 @@
 import { GameObjects } from "phaser";
-import { TNumberTuple2 } from "@/types/math";
+import { TNumberTuple2 } from "../types/math";
 
 interface IWorldPosTarget {
   parentContainer?: GameObjects.Container;

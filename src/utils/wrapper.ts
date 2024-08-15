@@ -1,8 +1,8 @@
-import { assert, assertIsDefined } from "@/utils/assert";
+import { assert, assertIsDefined } from "./assert";
 import CWrapper, {
   CWrapperConstructor,
   IWrappable,
-} from "@/components/atoms/wrapper";
+} from "../components/atoms/wrapper";
 
 export const getWrapper = <
   T extends IWrappable,

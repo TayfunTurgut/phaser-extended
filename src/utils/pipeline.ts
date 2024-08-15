@@ -1,5 +1,5 @@
 import { Game, Renderer } from "phaser";
-import { assertWebGL } from "@/utils/assert";
+import { assertWebGL } from "./assert";
 
 export type TPostFXPipeline = new (
   game: Game,

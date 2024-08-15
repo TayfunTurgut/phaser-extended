@@ -1,5 +1,5 @@
 import { Display, Game, Renderer } from "phaser";
-import { assertIsDefined } from "@/utils/assert";
+import { assertIsDefined } from "../utils/assert";
 
 export default class COutlinePipeline extends Renderer.WebGL.Pipelines
   .PostFXPipeline {

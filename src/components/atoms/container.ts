@@ -26,7 +26,7 @@ export default class CContainer extends CWrapper<GameObjects.Container> {
     );
     this.list.push(child);
     this.go.add(child.view);
-    child.onAdd?.();
+    child.onAdd(this);
   }
 
   remove<ChildType extends IWrappable>(

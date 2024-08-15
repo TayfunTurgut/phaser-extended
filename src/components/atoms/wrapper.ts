@@ -2,6 +2,7 @@ import { GameObjects, Geom, Scene, Structs, Types } from "phaser";
 import { addResizeListener, RESIZE_EVENT } from "@/utils/responsive";
 import { addClickListener } from "@/utils/input/click";
 import { addHoverListener } from "@/utils/input/hover";
+import CContainer from "@/components/atoms/container";
 
 export interface IWrappable extends GameObjects.GameObject {
   getBounds?: () => Geom.Rectangle;
@@ -26,6 +27,7 @@ export type CWrapperConstructor<T extends IWrappable> = new (
 export default abstract class CWrapper<T extends IWrappable> {
   protected readonly scene: Scene;
   protected readonly go: T;
+  protected parent: CContainer | null = null;
 
   protected constructor(scene: Scene) {
     this.scene = scene;
@@ -37,10 +39,16 @@ export default abstract class CWrapper<T extends IWrappable> {
   abstract init(props?: unknown): T;
 
   onCreate?(): void;
-  onAdd?(): void;
+  onAdd(parent: CContainer) {
+    this.parent = parent;
+  }
   onUpdate?(): void;
-  onRemove?(): void;
-  onDestroy?(): void;
+  onRemove() {
+    this.parent = null;
+  }
+  onDestroy() {
+    this.parent = null;
+  }
 
   responsive(callback: TResponsiveCallback<T>) {
     this.go.on(
